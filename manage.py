@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env ddtrace-run python
 import os
 import sys
 

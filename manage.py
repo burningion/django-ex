@@ -1,6 +1,8 @@
 #!/usr/bin/env ddtrace-run python
 import os
 import sys
+from ddtrace import patch_all
+patch_all()
 
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "project.settings")

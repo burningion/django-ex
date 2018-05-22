@@ -1,4 +1,4 @@
-#!/usr/bin/env ddtrace-run python
+#!/usr/bin/env python
 import os
 import sys
 from ddtrace import patch_all

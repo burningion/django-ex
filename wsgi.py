@@ -15,6 +15,7 @@ ddtrace.tracer.configure(
     port=os.environ['DD_AGENT_SERVICE_PORT'],
 )
 
+
 ddtrace.patch_all()
 
 from django.core.wsgi import get_wsgi_application

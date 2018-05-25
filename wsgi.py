@@ -10,13 +10,10 @@ https://docs.djangoproject.com/en/1.11/howto/deployment/wsgi/
 import os
 import ddtrace
 
-
-'''
 ddtrace.tracer.configure(
-    hostname=os.environ['DD_AGENT_SERVICE_HOST'],
-    port=os.environ['DD_AGENT_SERVICE_PORT'],
+    hostname=os.environ['KUBERNETES_SERVICE_HOST'],
 )
-'''
+
 
 ddtrace.tracer.debug_logging = True
 ddtrace.patch_all()

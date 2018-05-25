@@ -9,13 +9,16 @@ https://docs.djangoproject.com/en/1.11/howto/deployment/wsgi/
 
 import os
 from ddtrace import tracer
-os.environ['DATADOG_TRACE_AGENT_HOSTNAME'] = os.environ['KUBERNETES_SERVICE_HOST']
+from ddtrace.contrib.django.conf import settings
+
+tracer = settings.TRACER
+tracer.configure(hostname=os.environ['KUBERNETES_SERVICE_HOST'])
 
 # ddtrace.tracer.hostname = os.environ['KUBERNETES_SERVICE_HOST']
 
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "project.settings")
-tracer.patch_all()
+
 
 application = get_wsgi_application()

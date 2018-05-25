@@ -11,10 +11,12 @@ import os
 import ddtrace
 
 
+'''
 ddtrace.tracer.configure(
     hostname=os.environ['DD_AGENT_SERVICE_HOST'],
     port=os.environ['DD_AGENT_SERVICE_PORT'],
 )
+'''
 
 ddtrace.tracer.debug_logging = True
 ddtrace.patch_all()

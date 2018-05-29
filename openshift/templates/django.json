@@ -219,8 +219,17 @@
                         "key" : "django-secret-key"
                       }
                     }
+                  },
+                    {
+                    "name": "DATADOG_TRACE_AGENT_HOSTNAME",
+                    "valueFrom": {
+                      "resourceFieldRef" : {
+                        "containerName" : "datadog-agent",
+                        "resource" : "status.hostIP"
+                      }
+                    }
                   }
-                ],
+               ],
                 "resources": {
                   "limits": {
                     "memory": "${MEMORY_LIMIT}"

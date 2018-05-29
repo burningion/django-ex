@@ -132,6 +132,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 INTERNAL_IPS = ['127.0.0.1']
-DATADOG_TRACE = {
-    'AGENT_HOSTNAME': os.environ['KUBERNETES_SERVICE_HOST']
-}

@@ -223,9 +223,8 @@
                     {
                     "name": "DATADOG_TRACE_AGENT_HOSTNAME",
                     "valueFrom": {
-                      "resourceFieldRef" : {
-                        "containerName" : "datadog-agent",
-                        "resource" : "status.hostIP"
+                      "fieldRef" : {
+                        "fieldPath" : "status.hostIP"
                       }
                     }
                   }

@@ -220,7 +220,11 @@
                       }
                     }
                   },
-                    {
+                  {
+                    "name": "HELLO",
+                    "value": "WORLD"
+                  },
+                  {
                     "name": "DATADOG_TRACE_AGENT_HOSTNAME",
                     "valueFrom": {
                       "fieldRef" : {
